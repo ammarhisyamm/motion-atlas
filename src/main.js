@@ -80,6 +80,7 @@ function stopAnimations() { activeAnimations.forEach((animation) => animation.ca
 function runSpring() {
   stopAnimations();
   const box = document.querySelector('#spring-target');
+  box.style.transform = '';
   const stiffness = Number(document.querySelector('#stiffness').value);
   const damping = Number(document.querySelector('#damping').value);
   activeAnimations.push(animate(box, { x: 178, rotate: 12 }, { type: 'spring', stiffness, damping }));
